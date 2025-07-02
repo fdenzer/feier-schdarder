@@ -1,0 +1,68 @@
+{
+  "note": "This list contains magic tricks and spells detailed in the Dragonbane Quickstart PDF. The full core game contains more.",
+  "magic_rules": {
+    "casting_cost_wp": "Magic Tricks: 1 WP. Spells: 2 WP per power level (1-3). Spells without power level always cost 2 WP.",
+    "casting_roll": "Roll against skill level in the relevant school. Success = intended effect. Failure = no effect, WP still spent. Can push roll (optional rule). Magic tricks succeed automatically.",
+    "requirements": "Spells may require Word, Gesture, Focus (item held), or Ingredient (consumed). All requirements must be fulfilled.",
+    "casting_time": "Usually an action. Reaction spells exist (do not replace regular action). Rituals take a stretch or shift.",
+    "range": "Max distance. Personal: affects caster only. Area of Effect: starts at mage unless specified; can exempt targets with a bane. Sphere: affects all targets in area except mage. Cone: width equals distance from source, range is length.",
+    "duration": "Instant, Round (until next turn), Stretch, Shift, Concentration (ceases if another action, damage, or failed WIL vs fear; WIL roll to maintain if disturbed).",
+    "failure_dragons_demons": {
+      "failure": "No effect, WP spent. Describe manifest non-mechanically.",
+      "dragon_roll": "Target must roll dragon to resist/parry/dodge. Choose one: double damage/range; spell costs 0 WP; immediately cast another spell with bane.",
+      "demon_roll": "Cannot push roll."
+    }
+  },
+  "magic_tricks": [
+    {
+      "name": "Heat/Chill",
+      "cost_wp": 1,
+      "effect": "The area within 10 meters of you becomes pleasantly warm or cold. The effect protects against cold for one shift of time.",
+      "casting_time": "Action"
+    },
+    {
+      "name": "Ignite",
+      "cost_wp": 1,
+      "effect": "You light or extinguish a candle, torch, or lantern within 10 meters.",
+      "casting_time": "Action"
+    },
+    {
+      "name": "Puff of Smoke",
+      "cost_wp": 1,
+      "effect": "An impressive puff of smoke erupts in front of you. Popular for dramatic entrances, can give boon to SNEAKING (GM discretion).",
+      "casting_time": "Action"
+    }
+  ],
+  "spells": [
+    {
+      "name": "Gust of Wind",
+      "rank": 1,
+      "prerequisite": "Elementalism",
+      "requirement": ["Word", "Gesture"],
+      "casting_time": "Action",
+      "range": "10 meters (cone)",
+      "duration": "Instant",
+      "effect": "All untethered objects and creatures up to human size in the area of effect are pushed 2D4 meters away from you and suffer the same amount of bludgeoning damage. Against a swarm, deals 2D6 damage. Each additional power level increases the number of dice by one."
+    },
+    {
+      "name": "Fireball",
+      "rank": 1,
+      "prerequisite": "Elementalism",
+      "requirement": ["Word", "Gesture"],
+      "casting_time": "Action",
+      "range": "20 meters",
+      "duration": "Instant",
+      "effect": "Sends a fireball from your hand or focus at the target. Can be dodged or parried as a ranged attack. Inflicts 2D6 damage on a hit and sets fire to flammable objects. Each power level beyond the first increases the damage by D6 or creates another fireball that hits another target within range."
+    },
+    {
+      "name": "Pillar",
+      "rank": 1,
+      "prerequisite": "Elementalism",
+      "requirement": ["Word", "Gesture"],
+      "casting_time": "Action",
+      "range": "10 meters",
+      "duration": "Shift",
+      "effect": "Raises a pillar, three meters high and one meter wide, from the ground or a stone floor. If someone is standing in that spot, victim must make an ACROBATICS roll (not an action) to avoid falling off. If pillar is created under a low ceiling and roll fails, victim takes 2D6 bludgeoning damage. For each additional power level, height increases by three meters (can mean falling damage)."
+    }
+  ]
+}

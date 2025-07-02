@@ -1,0 +1,55 @@
+[
+  {
+    "name": "Human",
+    "innate_ability": null,
+    "description": "Humans are one of the playable kin."
+  },
+  {
+    "name": "Halfling",
+    "innate_ability": {
+      "name": "Hard to Catch",
+      "cost_wp": 3,
+      "effect": "You can activate this ability when dodging an attack, getting a boon to the EVADE roll."
+    },
+    "description": "Halflings are one of the playable kin. Krisanna the Bold is a Halfling Thief."
+  },
+  {
+    "name": "Dwarf",
+    "innate_ability": null,
+    "description": "Dwarfs are one of the playable kin."
+  },
+  {
+    "name": "Elf",
+    "innate_ability": {
+      "name": "Inner Peace",
+      "cost_wp": "—",
+      "effect": "As an elf, you can meditate deeply during a stretch rest. You heal an additional D6 HP and a D6 extra WP, and can recover from an additional condition. You are completely unresponsive during your meditation and cannot be awakened."
+    },
+    "description": "Elves are one of the playable kin. Orla Moonsilver is an Elf Hunter."
+  },
+  {
+    "name": "Mallard",
+    "innate_abilities": [
+      {
+        "name": "Ill-tempered",
+        "cost_wp": 3,
+        "effect": "Mallards tend to have a choleric temper. You can activate this ability (no action) when making a skill roll and get a boon to the roll. You also become Angry, if you’re not already. This ability cannot be used for rolls against INT or INT-based skills."
+      },
+      {
+        "name": "Webbed Feet",
+        "cost_wp": "—",
+        "effect": "As a mallard you also get a boon to all SWIMMING rolls. You always move at full speed in or under water."
+      }
+    ],
+    "description": "Mallards are one of the playable kin and have two innate abilities. Makander of Halfbay is a Mallard Knight."
+  },
+  {
+    "name": "Wolfkin",
+    "innate_ability": {
+      "name": "Hunting Instincts",
+      "cost_wp": 3,
+      "effect": "You can use this ability to designate a creature in sight, or a creature you can catch the scent of, as your prey. This counts as an action in combat. You can follow the scent of your prey for a full day, and you can spend 1 further WP (not an action) to gain a boon for an attack against your prey."
+    },
+    "description": "Wolfkin are one of the playable kin. Bastonn Bloodjaw is a Wolfkin Fighter."
+  }
+]
