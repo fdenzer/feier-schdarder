@@ -1,0 +1,48 @@
+name: Deploy Vue App to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Trigger deployment on push to main branch
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Using a recent LTS version, can be adjusted
+          cache: 'npm'
+          cache-dependency-path: dragonbane-char-gen/package-lock.json
+
+      - name: Install dependencies
+        working-directory: ./dragonbane-char-gen
+        run: npm ci # Using ci for cleaner installs in CI environments
+
+      - name: Build project
+        working-directory: ./dragonbane-char-gen
+        run: npm run build # This will create the dist folder
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dragonbane-char-gen/dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
