@@ -6,6 +6,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/feier-schdarder/', // Set base path for GitHub Pages
   plugins: [
     vue(),
     vueDevTools(),
