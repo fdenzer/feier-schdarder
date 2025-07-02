@@ -1,0 +1,52 @@
+{
+  "note": "Heroic abilities are special abilities that give specific advantages. Pre-generated characters have one each, except mages who wield magic. This list is based on the pre-gen characters in the Quickstart.",
+  "abilities": [
+    {
+      "name": "Adaptive",
+      "character_example": "Archmaster Aodhan (Mage - uses Magic instead, but this is listed as his heroic ability textually)",
+      "cost_wp": 3,
+      "effect": "When rolling for a skill, you can choose to make the roll using another skill of your choice. You must be able to justify how you use the selected skill instead of the normal one. The GM has the final word, but should be lenient."
+    },
+    {
+      "name": "Twin Shot",
+      "character_example": "Orla Moonsilver",
+      "cost_wp": 3,
+      "effect": "By activating this ability when attacking with a bow, you shoot two arrows instead of one. Roll just once to hit, with a bane. Damage is rolled separately. The arrows can be directed at the same target or two different targets."
+    },
+    {
+      "name": "Guardian",
+      "character_example": "Makander of Halfbay",
+      "cost_wp": 2,
+      "effect": "You do not hesitate to take a hit to protect your friends. If you and another player character are both within 2 meters of the same enemy and the enemy tries to attack the other character, you can activate this ability to force the enemy to attack you instead. Using this ability can be done out of turn and it does not count as an action."
+    },
+    {
+      "name": "Hard to Catch",
+      "character_example": "Krisanna the Bold (This is also listed as a Halfling innate ability, but presented as her Heroic Ability on her sheet)",
+      "cost_wp": 3,
+      "effect": "You can activate this ability when dodging an attack, getting a boon to the EVADE roll."
+    },
+    {
+      "name": "Backstabbing",
+      "character_example": "Krisanna the Bold",
+      "cost_wp": 3,
+      "effect": "You can activate this ability when making a melee attack against an enemy that is also within 2 meters of another player character. Your attack then counts as a sneak attack, which means it cannot be dodged or parried, you get a boon to the roll, and the number of dice rolled for the damage is increased by one (i.e. 2D8 instead of D8). This ability can only be used with a subtle weapon. Activating this ability does not count as an action."
+    },
+    {
+      "name": "Hunting Instincts",
+      "character_example": "Bastonn Bloodjaw (This is also listed as a Wolfkin innate ability, but presented as his Heroic Ability on his sheet)",
+      "cost_wp": 3,
+      "effect": "You can use this ability to designate a creature in sight, or a creature you can catch the scent of, as your prey. This counts as an action in combat. You can follow the scent of your prey for a full day, and you can spend 1 further WP (not an action) to gain a boon for an attack against your prey."
+    },
+    {
+      "name": "Veteran",
+      "character_example": "Bastonn Bloodjaw",
+      "cost_wp": 1,
+      "effect": "Activating this ability at the start of a combat round allows you to retain your initiative card from the previous round instead of drawing a new one. Doing so does not count as an action."
+    }
+  ],
+  "magic_as_heroic_ability": {
+    "description": "Mages wield magic instead of a typical heroic ability.",
+    "cost_wp": "Varies (see Spells)",
+    "effect": "As a wizard you can use magic. Read more about magic on page 23 in the Quickstart PDF."
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "note": "Professions are described in detail in the full Dragonbane core game. The Quickstart PDF mentions the following professions for the pre-generated characters, but does not provide a comprehensive list or mechanics for profession selection beyond this.",
+  "examples_from_pregen": [
+    {
+      "name": "Mage - Elementalist",
+      "character": "Archmaster Aodhan"
+    },
+    {
+      "name": "Hunter",
+      "character": "Orla Moonsilver"
+    },
+    {
+      "name": "Knight",
+      "character": "Makander of Halfbay"
+    },
+    {
+      "name": "Thief",
+      "character": "Krisanna the Bold"
+    },
+    {
+      "name": "Fighter",
+      "character": "Bastonn Bloodjaw"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "rule": "An item of great sentimental value that you always carry with you. Always a tiny item with no practical use. Once per gaming session, you can use your memento to recover an additional condition during a stretch rest.",
+  "examples": [
+    {
+      "name": "Worn diary full of your experiences and discoveries.",
+      "character_example": "Archmaster Aodhan"
+    },
+    {
+      "name": "Fang from the troll that slew your sister.",
+      "character_example": "Orla Moonsilver"
+    },
+    {
+      "name": "A fine pipe made of black horn (a gift from your father).",
+      "character_example": "Makander of Halfbay"
+    },
+    {
+      "name": "A treasure map you \"found.\"",
+      "character_example": "Krisanna the Bold"
+    },
+    {
+      "name": "Blue bottle of perfume.",
+      "character_example": "Bastonn Bloodjaw"
+    }
+  ]
+}

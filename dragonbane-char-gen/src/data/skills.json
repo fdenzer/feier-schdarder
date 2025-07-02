@@ -1,0 +1,54 @@
+{
+  "note": "The full Dragonbane game describes thirty core skills. This list is derived from the Quickstart Guide and pre-generated characters and may not be exhaustive. The base attribute is included where specified by the pre-gen sheets.",
+  "core_skills": [
+    { "name": "Acrobatics", "attribute": "AGL" },
+    { "name": "Awareness", "attribute": "INT" },
+    { "name": "Bartering", "attribute": "CHA" },
+    { "name": "Beast Lore", "attribute": "INT" },
+    { "name": "Bluffing", "attribute": "CHA" },
+    { "name": "Bushcraft", "attribute": "INT" },
+    { "name": "Crafting", "attribute": "STR" },
+    { "name": "Evade", "attribute": "AGL" },
+    { "name": "Healing", "attribute": "INT" },
+    { "name": "Hunting & Fishing", "attribute": "AGL" },
+    { "name": "Languages", "attribute": "INT" },
+    { "name": "Myths & Legends", "attribute": "INT" },
+    { "name": "Performance", "attribute": "CHA" },
+    { "name": "Persuasion", "attribute": "CHA" },
+    { "name": "Riding", "attribute": "AGL" },
+    { "name": "Seamanship", "attribute": "INT" },
+    { "name": "Sleight of Hand", "attribute": "AGL" },
+    { "name": "Sneaking", "attribute": "AGL" },
+    { "name": "Spot Hidden", "attribute": "INT" },
+    { "name": "Swimming", "attribute": "AGL" }
+  ],
+  "weapon_skills": [
+    { "name": "Axes", "attribute": "STR" },
+    { "name": "Bows", "attribute": "AGL" },
+    { "name": "Brawling", "attribute": "STR" },
+    { "name": "Crossbows", "attribute": "AGL" },
+    { "name": "Hammers", "attribute": "STR" },
+    { "name": "Knives", "attribute": "AGL" },
+    { "name": "Slings", "attribute": "AGL" },
+    { "name": "Spears", "attribute": "STR" },
+    { "name": "Staves", "attribute": "AGL" },
+    { "name": "Swords", "attribute": "STR" }
+  ],
+  "secondary_skills": [
+    { "name": "Elementalism", "attribute": "INT", "description": "A school of magic." },
+    { "name": "Animism", "attribute": null, "description": "A school of magic (mentioned, not detailed in pre-gen)." },
+    { "name": "Mentalism", "attribute": null, "description": "A school of magic (mentioned, not detailed in pre-gen)." }
+  ],
+  "general_skill_rules": {
+    "measurement": "Skill level on a scale from 1 to 18. Higher is better.",
+    "rolling": "Roll a D20. Result <= skill level is a success.",
+    "failure": "Rolling above skill level means failure.",
+    "dragon_roll": "Rolling a 1 (dragon) is a particular success. Combat: specific effects (e.g., increased damage). Outside combat: GM decides (impress, achieve more, faster action).",
+    "demon_roll": "Rolling a 20 (demon) fails regardless of skill level and cannot be pushed. Combat: additional effects. Outside combat: GM decides (damage self/other/item, make fool of self, make noise).",
+    "only_one_chance": "Rule: only one chance to succeed with an action. Does not apply in combat.",
+    "help_from_others": "Declare before roll. Helper must be present and capable. Gives a boon. Helper loses own action in combat. Only one helper per roll.",
+    "boons_banes": "Roll two D20. Boon: best result applies. Bane: worst result applies. Multiple: roll additional D20 for each, count only lowest/highest. Boon negates Bane.",
+    "pushing_roll": "Optional rule. Re-roll failed skill/attribute roll. New result applies. Cannot push a demon roll. Suffer a condition immediately after re-roll (Exhausted-STR, Sickly-CON, Dazed-AGL, Angry-INT, Scared-WIL, Disheartened-CHA). Cannot choose existing condition. Must explain how condition results. GM can reject. Once all six conditions, no more pushing.",
+    "opposed_rolls": "Used when actively opposed. Both roll. Active party only can push. If your roll fails, action fails. If your roll succeeds & opponent fails, action succeeds. If both succeed, your action succeeds if your roll <= opponent's result."
+  }
+}

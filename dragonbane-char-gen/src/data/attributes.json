@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Strength",
+    "abbreviation": "STR",
+    "description": "Raw muscle power."
+  },
+  {
+    "name": "Constitution",
+    "abbreviation": "CON",
+    "description": "Physical fitness and resilience."
+  },
+  {
+    "name": "Agility",
+    "abbreviation": "AGL",
+    "description": "Body control, speed, and fine motor skills."
+  },
+  {
+    "name": "Intelligence",
+    "abbreviation": "INT",
+    "description": "Mental acuity, intellect, and reasoning skills."
+  },
+  {
+    "name": "Willpower",
+    "abbreviation": "WIL",
+    "description": "Self-discipline and focus."
+  },
+  {
+    "name": "Charisma",
+    "abbreviation": "CHA",
+    "description": "Force of personality and empathy."
+  }
+]

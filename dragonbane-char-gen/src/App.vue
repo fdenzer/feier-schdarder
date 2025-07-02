@@ -1,7 +1,25 @@
 <script setup>
-import { ref, computed } from 'vue';
+import { ref, computed, onMounted } from 'vue';
+import { useDragonbaneDataStore } from './stores/dragonbaneData';
 
-// Core Attributes
+const dragonbaneDataStore = useDragonbaneDataStore();
+
+onMounted(() => {
+  console.log("Dragonbane Data Store accessible in App.vue");
+  console.log("Kin from store:", dragonbaneDataStore.kin);
+  console.log("Attributes from store:", dragonbaneDataStore.attributes);
+  console.log("Skills from store:", dragonbaneDataStore.skills);
+  console.log("Spells from store:", dragonbaneDataStore.spells);
+  console.log("Gear general rules from store:", dragonbaneDataStore.gear.encumbrance_rules);
+
+  // Example: Update local ref with store data if needed, or use store directly in template
+  // For now, we'll primarily log and show one example of direct store usage in template.
+  // If selectedKin was meant to use the store's kin list:
+  // selectedKin.value = dragonbaneDataStore.kin[0] || null;
+});
+
+// Core Attributes - consider if these should be sourced from/synced with the store
+// For now, keeping local state for form inputs as it was.
 const attributes = ref({
   STR: 10,
   CON: 10,
@@ -19,40 +37,10 @@ function validateAttribute(attr) {
   if (attributes.value[attr] > attributeMax) attributes.value[attr] = attributeMax;
 }
 
-// Kin
-const kinList = ref([
-  {
-    name: 'Human',
-    abilityName: 'Adaptive',
-    abilityDescription: 'When rolling for a skill, you can choose to make the roll using another skill of your choice. You must be able to justify how you use the selected skill instead of the normal one. The GM has the final word, but should be lenient. (Cost: 3 WP, as per Archmaster Aodhan pre-gen, though PDF p5 says innate abilities cost WP in most cases - this might vary)'
-  },
-  {
-    name: 'Halfling',
-    abilityName: 'Hard to Catch',
-    abilityDescription: 'You can activate this ability when dodging an attack, getting a boon to the EVADE roll. (Cost: 3 WP, as per Krisanna pre-gen)'
-  },
-  {
-    name: 'Dwarf',
-    abilityName: 'Robust (Example - Not in Quickstart PDF)',
-    abilityDescription: 'Dwarves are known for their hardiness. Gain +1 HP per level or a similar benefit. (Details needed from full rules)'
-  }, // Placeholder, Dwarf not in pre-gens
-  {
-    name: 'Elf',
-    abilityName: 'Inner Peace',
-    abilityDescription: 'As an elf, you can meditate deeply during a stretch rest. You heal an additional D6 HP and a D6 extra WP, and can recover from an additional condition. You are completely unresponsive during your meditation and cannot be awakened. (Cost: Free, as per Orla pre-gen)'
-  },
-  {
-    name: 'Mallard',
-    abilityName: 'Ill-tempered & Webbed Feet',
-    abilityDescription: 'Ill-tempered: Activate when making a skill roll (not INT-based) to get a boon; become Angry. (Cost: 3 WP). Webbed Feet: Boon to SWIMMING rolls, full speed in water. (Cost: Free). (As per Makander pre-gen)'
-  },
-  {
-    name: 'Wolfkin',
-    abilityName: 'Hunting Instincts',
-    abilityDescription: 'Designate a creature in sight/scent as prey (action). Follow scent for a day. Spend 1 WP for a boon on attack against prey. (Cost: 3 WP to designate, as per Bastonn pre-gen)'
-  },
-]);
-const selectedKin = ref(kinList.value[0]);
+// Kin - selectedKin will now reference an object from the Pinia store's kin array.
+// Initialize selectedKin after the store might be available or in onMounted.
+// For simplicity, we can try to initialize it if store.kin has data.
+const selectedKin = ref(dragonbaneDataStore.kin?.[0] || null);
 
 // Derived Ratings
 const hitPoints = computed(() => attributes.value.CON);
@@ -139,13 +127,38 @@ const isOverEncumbered = computed(() => currentEncumbrance.value > encumbranceLi
 
       <!-- Kin Selection -->
       <section class="kin-section card">
-        <h2>Kin</h2>
+        <h2>Kin (from Pinia Store)</h2>
         <select v-model="selectedKin" class="kin-select">
-          <option v-for="k in kinList" :key="k.name" :value="k">{{ k.name }}</option>
+          <option v-for="k in dragonbaneDataStore.kin" :key="k.name" :value="k">
+            {{ k.name }}
+          </option>
         </select>
         <div v-if="selectedKin" class="kin-ability">
-          <h3>{{ selectedKin.abilityName }}</h3>
-          <p>{{ selectedKin.abilityDescription }}</p>
+          <h3>{{ selectedKin.name }} - Innate Ability/Abilities</h3>
+          <div v-if="selectedKin.innate_ability">
+            <strong>{{ selectedKin.innate_ability.name }}:</strong>
+            <p>{{ selectedKin.innate_ability.effect }}
+               <span v-if="selectedKin.innate_ability.cost_wp && selectedKin.innate_ability.cost_wp !== '—'">
+                 (Cost: {{ selectedKin.innate_ability.cost_wp }} WP)
+               </span>
+            </p>
+          </div>
+          <div v-if="selectedKin.innate_abilities">
+            <div v-for="ability in selectedKin.innate_abilities" :key="ability.name">
+              <strong>{{ ability.name }}:</strong>
+              <p>{{ ability.effect }}
+                 <span v-if="ability.cost_wp && ability.cost_wp !== '—'">
+                   (Cost: {{ ability.cost_wp }} WP)
+                 </span>
+              </p>
+            </div>
+          </div>
+          <p v-if="!selectedKin.innate_ability && !selectedKin.innate_abilities && selectedKin.name === 'Human'">
+            Humans are versatile and adaptable (details for specific human innate abilities might be in the full core rulebook).
+          </p>
+           <p v-if="!selectedKin.innate_ability && !selectedKin.innate_abilities && selectedKin.name === 'Dwarf'">
+            Dwarves are sturdy and resilient (details for specific dwarf innate abilities might be in the full core rulebook).
+          </p>
         </div>
       </section>
 

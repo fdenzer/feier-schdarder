@@ -1,0 +1,201 @@
+{
+  "note": "This data is extracted from the Dragonbane Quickstart PDF. Full gear lists and details are likely in the core rulebook.",
+  "encumbrance_rules": {
+    "limit": "Half your STR (rounded up) items in Inventory without difficulty.",
+    "weapons_at_hand": "Up to three weapons at hand (worn on belt or readily available). Recorded under Weapons, do not count toward encumbrance. Shields count as weapons here.",
+    "helmet_armor": "Worn helmet & armor do not count toward encumbrance.",
+    "food": "Up to four rations of food count as one item.",
+    "torches_lanterns": "A torch, lamp, or lantern is an item. Lamps/lanterns can be refilled with lamp oil.",
+    "arrows_slingstones": "Quiver of arrows counts as a single item. Slingstones do not need to be noted down.",
+    "heavy_items": "Count as 2, 3, or more normal items (weight 2, 3, 4+). Take up rows equal to weight in inventory.",
+    "tiny_items": "Small, light items hidden in a closed fist. Do not affect encumbrance. Recorded in own section.",
+    "coins_encumbrance": "Single coins are tiny. <100: no encumbrance. 100-199: 1 item. 200-299: 2 items, etc.",
+    "over_encumbered": "Can temporarily carry more. Make STR roll to move in combat or walk for a shift. Failure: drop items or stay put.",
+    "carrying_others": "Automatically over-encumbered, cannot fight in combat."
+  },
+  "coins": {
+    "copper": "Used for smaller transactions.",
+    "silver": "Monetary transactions generally made with silver. 1 silver = 10 copper.",
+    "gold": "Used for larger transactions. 1 gold = 10 silver."
+  },
+  "weapons": [
+    {
+      "name": "Staff",
+      "grip": "2h",
+      "range": "2m",
+      "damage": "D8",
+      "durability": 9,
+      "features": ["Bludgeoning"],
+      "skill": "Staves",
+      "character_example": "Archmaster Aodhan"
+    },
+    {
+      "name": "Longbow",
+      "grip": "2h",
+      "range": "100m",
+      "damage": "D12",
+      "durability": 6,
+      "features": ["Piercing"],
+      "skill": "Bows",
+      "character_example": "Orla Moonsilver"
+    },
+    {
+      "name": "Knife",
+      "grip": "1h",
+      "range": " melee / 8m throwing (assumed from pre-gen, range not specified for throwing in main text but skill is Knives)",
+      "damage": "D8",
+      "durability": 6,
+      "features": ["Subtle", "Piercing"],
+      "skill": "Knives",
+      "character_example": "Orla Moonsilver (also Krisanna the Bold)"
+    },
+    {
+      "name": "Battleaxe",
+      "grip": "1h",
+      "range": "2m",
+      "damage": "2D8",
+      "durability": 9,
+      "features": ["Slashing"],
+      "skill": "Axes",
+      "character_example": "Makander of Halfbay"
+    },
+    {
+      "name": "Short Sword",
+      "grip": "1h",
+      "range": "2m",
+      "damage": "D10",
+      "durability": 12,
+      "features": ["Slashing", "Piercing"],
+      "skill": "Swords",
+      "character_example": "Makander of Halfbay (also Grub the Goblin)"
+    },
+    {
+      "name": "Small Shield",
+      "grip": "1h",
+      "range": "N/A (used for parrying)",
+      "damage": "D8 (parry value? Text says 'damage D8', durability 15 on sheet)",
+      "durability": 15,
+      "features": ["Bludgeoning (if used as weapon?)"],
+      "skill": "Any STR-based melee skill for parrying",
+      "character_example": "Makander of Halfbay"
+    },
+    {
+      "name": "Dagger",
+      "grip": "1h",
+      "range": " melee / 8m throwing (assumed from Krisanna's sheet, like Knife)",
+      "damage": "D8",
+      "durability": 9,
+      "features": ["Subtle", "Piercing", "Slashing"],
+      "skill": "Knives",
+      "character_example": "Krisanna the Bold"
+    },
+    {
+      "name": "Long Spear",
+      "grip": "2h",
+      "range": "4m",
+      "damage": "2D8",
+      "durability": 9,
+      "features": ["Long", "Piercing"],
+      "skill": "Spears",
+      "character_example": "Bastonn Bloodjaw (also Mummified Guards)"
+    },
+    {
+      "name": "Short Spear",
+      "grip": "1h",
+      "range": " melee / 36m throwing (range from Bastonn's sheet)",
+      "damage": "D10",
+      "durability": 9,
+      "features": ["Piercing"],
+      "skill": "Spears",
+      "character_example": "Bastonn Bloodjaw"
+    },
+    {
+      "name": "Shortbow",
+      "grip": "2h",
+      "range": "Not specified, assume less than Longbow",
+      "damage": "D10",
+      "durability": "Not specified",
+      "features": ["Piercing"],
+      "skill": "Bows",
+      "character_example": "Grub the Goblin"
+    },
+    {
+      "name": "Goblin Poison Dagger",
+      "grip": "1h",
+      "range": "melee",
+      "damage": "Not specified (assume D8 like other daggers)",
+      "durability": "Not specified",
+      "features": ["Piercing", "Slashing", "Coated with lethal viper venom (potency 9)"],
+      "skill": "Knives",
+      "found_in_adventure": "Riddermound - Antechamber"
+    },
+    {
+      "name": "Fiendcrusher (Light Warhammer)",
+      "grip": "Not specified (assume 1h or 1h/2h)",
+      "range": "melee",
+      "damage": "2D6",
+      "durability": 15,
+      "features": ["Magical: Glows red when bearer is within 10 meters of a demon", "Set with jewels"],
+      "skill": "Hammers",
+      "found_in_adventure": "Riddermound - The Lady's Hall"
+    }
+  ],
+  "armor": [
+    {
+      "name": "Leather Armor",
+      "armor_rating": 1,
+      "bane_on": ["SNEAKING (Makander's sheet has N/A, Krisanna's sheet has SNEAKING)"],
+      "notes": "+2 armor rating vs bludgeoning damage (optional rule).",
+      "character_example": "Orla Moonsilver, Krisanna the Bold, Grub the Goblin"
+    },
+    {
+      "name": "Plate Armor",
+      "armor_rating": 6,
+      "bane_on": ["SNEAKING", "ACROBATICS", "EVADE (Makander's sheet indicates these)"],
+      "notes": "No specific bonus vs damage types mentioned for plate.",
+      "character_example": "Makander of Halfbay"
+    },
+    {
+      "name": "Studded Leather Armor",
+      "armor_rating": 2,
+      "bane_on": ["SNEAKING (Bastonn's sheet)"],
+      "notes": "+2 armor rating vs bludgeoning damage (optional rule).",
+      "character_example": "Bastonn Bloodjaw"
+    },
+    {
+      "name": "Chainmail (Gilded)",
+      "armor_rating": 4,
+      "bane_on": ["SNEAKING"],
+      "notes": "Light and flexible. +2 armor rating vs slashing damage (optional rule).",
+      "found_in_adventure": "Riddermound - The Lady's Hall (on the Lady)"
+    },
+    {
+      "name": "Chainmail (Rusted)",
+      "armor_rating": "Crumbles if touched",
+      "bane_on": [],
+      "notes": "",
+      "found_in_adventure": "Riddermound - Guardhouse (on Mummified Guards)"
+    }
+  ],
+  "helmets": {
+    "general_rule": "Can be combined with armor to further increase armor rating. Equipping/unequipping is an action. Can give bane on certain skills. None of the pre-gen characters list a helmet.",
+    "demon_crown": {
+       "name": "Demon Crown (Gilded Crown)",
+       "armor_rating": "Not specified as AR, but has protective effect.",
+       "effect": "Imbued with a spell which halves all damage from attacks by demons (rounding up). Runes explain effect (LANGUAGES roll).",
+       "found_in_adventure": "Riddermound - Tomb of the Dragon Knight"
+    }
+  },
+  "general_items": [
+    { "name": "Spellbook", "character_example": "Archmaster Aodhan" },
+    { "name": "Torch", "character_example": "Multiple pre-gens" },
+    { "name": "Rope", "character_example": "Orla Moonsilver, Krisanna the Bold" },
+    { "name": "Lockpicks", "character_example": "Krisanna the Bold" },
+    { "name": "Quiver", "character_example": "Orla Moonsilver" },
+    { "name": "Flint & Tinder", "category": "Tiny Item", "character_example": "Multiple pre-gens" },
+    { "name": "Bandages", "mentioned_for": "HEALING skill (bane if not used)"},
+    { "name": "Antidote", "mentioned_for": "Poison effects"},
+    { "name": "Blanket", "mentioned_for": "Resisting Cold (bane if not used)"},
+    { "name": "Fur", "mentioned_for": "Resisting Cold (boon if used)"}
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "note": "Your character has a weakness, an Achilles heel. You can roll or choose from a table in the full game, choose freely, or use these examples from the Quickstart.",
+  "examples": [
+    {
+      "name": "Fainthearted",
+      "description": "You always stay at the back of the group.",
+      "character_example": "Archmaster Aodhan"
+    },
+    {
+      "name": "Bigoted",
+      "description": "Nightkin such as orcs and goblins are evil and need to be fought.",
+      "character_example": "Orla Moonsilver"
+    },
+    {
+      "name": "Foolhardy",
+      "description": "You always go first into danger.",
+      "character_example": "Makander of Halfbay"
+    },
+    {
+      "name": "Reckless",
+      "description": "You always take big risks without thought of the consequences.",
+      "character_example": "Krisanna the Bold"
+    },
+    {
+      "name": "Gluttonous",
+      "description": "You take every chance you get to eat something tasty.",
+      "character_example": "Bastonn Bloodjaw"
+    }
+  ],
+  "generic_weakness_roll_table_reference": "The PDF mentions 'You can roll or choose from the table below or choose your weakness freely'. However, no table is provided in the Quickstart PDF itself, implying it's in the full core game."
+}
